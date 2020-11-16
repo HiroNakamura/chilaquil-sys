@@ -1,0 +1,39 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="contenedor">
+        <article>
+            {{ bienvenida }}
+        </article>
+        <aside *ngIf='isActivo'>
+            <ul>
+                <li *ngFor='let lenguaje of lenguajes' (click)='lenguajeSeleccionado(lenguaje)'>{{ lenguaje }}</li>
+            </ul>
+            <p>El lenguaje seleccionado es: {{ lenguaje }}</p>
+        </aside>
+        
+        <div>
+            <button id="my-button" (click)="isActivo = !isActivo">{{isActivo ? 'Ocultar' : 'Mostrar'}}</button>
+        </div>
+        <div>
+            <button id="my-button" (click)="mensaje()" (dblclick)="limpiar()">Da clic aquí</button>
+        </div>
+        <div>
+            <label>Obtener pulsaciones</label>
+            <p>Introduce edad:</p>
+            <input #textbox type="number" [(ngModel)]="edad" required />
+            <p>{{ resultado }}</p>
+            <button id="my-button" (click)="getPulsaciones(textbox.value)">Pulsaciones</button>
+            <button id="my-button" (click)="edad=0; resultado='' ">Limpiar</button>
+        </div>
+    </section>
+        <footer>@Inforhomex</footer>        
+</body>
+</html>
+
+
+
+

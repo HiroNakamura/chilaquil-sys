@@ -1,0 +1,18 @@
+body{
+    background-color: #EDEFEE;
+    border-top: 50%;
+    color:rgb(1, 2, 2);
+    text-align: justify;
+}
+
+h1{
+    background-color: rgb(67, 28, 173);
+    color: rgb(236, 239, 241);
+    font-family: 'Goldman', cursive;
+    text-align: center;
+}
+h2{
+    color: #D80D29 ;
+    font-family: 'Goldman', cursive;
+    text-align: center;
+}

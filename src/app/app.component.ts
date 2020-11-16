@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'chilaquil-sys';
+  title = 'Chilaquil-System';
+  descripcion = 'Aprendiendo Angular Cli';
+
+  mensaje():void{
+    console.log(`Título de la página: ${this.title}, Descripción: ${this.descripcion}`);
+  }
+
+  limpiar():void{
+    console.clear()
+  }
+
 }
